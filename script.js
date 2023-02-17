@@ -5,15 +5,24 @@ const ol = document.querySelector(`#todoList`);
 
 const input = document.querySelector(`#newTodoInput`);
 
-btn.addEventListener(`mousedown`, function () {
-  if (input.value !== "") {
-    ol.innerHTML = `<li>listItem</li>
+const listItem = document.createElement(`li`);
+listItem.innerHTML = `<li>listItem</li>
   <li>listItem</li>
   <li>listItem</li>
   <li>listItem</li>`;
-  }
-	console.log(ol.contains(listItem));
+
+btn.addEventListener(`click`, function () {
+  ol.appendChild(listItem);
 });
+
+btn.addEventListener(`mousedown`, function () {
+  if (input.value !== "") {
+    ol.appendChild(listItem);
+  }
+});
+
 btn.addEventListener(`mouseup`, function () {
   input.value = "";
 });
+
+console.log(ol.contains(listItem));
