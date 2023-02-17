@@ -12,7 +12,7 @@ btn.addEventListener(`mousedown`, function () {
   <li>listItem</li>
   <li>listItem</li>`;
   }
-	console.log(`items are added`);
+	console.log(ol.contains(listItem));
 });
 btn.addEventListener(`mouseup`, function () {
   input.value = "";
