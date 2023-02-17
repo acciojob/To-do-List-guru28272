@@ -20,4 +20,6 @@ btn.addEventListener(`mouseup`, function () {
   input.value = "";
 });
 
-console.log(ol.contains(listItem));
+btn.addEventListener(`click`, function () {
+  console.log(ol.contains(listItem));
+});
