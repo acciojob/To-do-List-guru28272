@@ -11,15 +11,10 @@ listItem.innerHTML = `<li>listItem</li>
   <li>listItem</li>
   <li>listItem</li>`;
 
-btn.addEventListener(`mousedown`, function () {
+btn.addEventListener(`click`, function () {
   if (input.value !== "") {
-    ol.appendChild(listItem);
+	  ol.appendChild(`<li>${input.value}</li>`);
+	  input.value=``;
   }
 });
-btn.addEventListener(`mouseup`, function () {
-  input.value = "";
-});
 
-btn.addEventListener(`click`, function () {
-  console.log(ol.contains(listItem));
-});
