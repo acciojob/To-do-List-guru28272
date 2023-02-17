@@ -12,6 +12,7 @@ btn.addEventListener(`mousedown`, function () {
   <li>listItem</li>
   <li>listItem</li>`;
   }
+	console.log(`items are added`);
 });
 btn.addEventListener(`mouseup`, function () {
   input.value = "";
