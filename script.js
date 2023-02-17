@@ -13,7 +13,9 @@ listItem.innerHTML = `<li>listItem</li>
 
 btn.addEventListener(`click`, function () {
   if (input.value !== "") {
-	  ol.appendChild(`<li>${input.value}</li>`);
+	  const li = document.createElement('li')
+  li.innerText = input.value;
+	  ol.appendChild(li)
 	  input.value=``;
   }
 });
