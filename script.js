@@ -11,16 +11,11 @@ listItem.innerHTML = `<li>listItem</li>
   <li>listItem</li>
   <li>listItem</li>`;
 
-btn.addEventListener(`click`, function () {
-  ol.appendChild(listItem);
-});
-
 btn.addEventListener(`mousedown`, function () {
   if (input.value !== "") {
     ol.appendChild(listItem);
   }
 });
-
 btn.addEventListener(`mouseup`, function () {
   input.value = "";
 });
