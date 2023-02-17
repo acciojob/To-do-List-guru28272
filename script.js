@@ -5,11 +5,14 @@ const ol = document.querySelector(`#todoList`);
 
 const input = document.querySelector(`#newTodoInput`);
 
-btn.addEventListener(`click`, function () {
+btn.addEventListener(`mousedown`, function () {
   if (input.value !== "") {
     ol.innerHTML = `<li>listItem</li>
   <li>listItem</li>
   <li>listItem</li>
   <li>listItem</li>`;
   }
+});
+btn.addEventListener(`mouseup`, function () {
+  input.value = "";
 });
